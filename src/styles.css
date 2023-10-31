@@ -1,0 +1,6 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    overflow: hidden;
+    background: #3b0e68;
+    background: radial-gradient(circle, #3b0e68 0%, #1a084e 100%);
+}

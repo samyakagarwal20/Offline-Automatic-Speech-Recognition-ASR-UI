@@ -1,0 +1,145 @@
+  .mic {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+  }
+
+  .mic::before,
+  .mic::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 100%;
+      z-index: 2;
+      box-shadow: 0 0 20px 20px #1c084f;
+  }
+
+  .mic::before {
+      width: 400px;
+      height: 400px;
+      background-color: #1a084e;
+  }
+
+  .mic::after {
+      width: 250px;
+      height: 250px;
+      background-color: #2f1e5f;
+      animation: circle-size 0.8s linear infinite alternate;
+
+      border: 1px white solid;
+  }
+
+  .mic-icon {
+      box-sizing: border-box;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(5);
+      display: block;
+      width: 16px;
+      height: 12px;
+      border-bottom-left-radius: 120px;
+      border-bottom-right-radius: 120px;
+      border: 2px solid;
+      border-top: 0;
+      margin-top: 20px;
+      z-index: 3;
+  }
+
+  .mic-icon::before,
+  .mic-icon::after {
+      content: "";
+      display: block;
+      box-sizing: border-box;
+      position: absolute;
+  }
+
+  .mic-icon::before {
+      width: 2px;
+      height: 5px;
+      top: calc(100% + 1px);
+      left: 50%;
+      transform: translate(-50%, 0);
+      background-color: white;
+  }
+
+  .mic-icon::after {
+      border: 2px solid;
+      width: 8px;
+      height: 18px;
+      top: -10px;
+      left: 50%;
+      border-radius: 4px;
+      transform: translate(-50%, 0);
+  }
+
+  .mic-shadow {
+      width: 400px;
+      height: 400px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border-radius: 100%;
+      border: 20px solid;
+      z-index: 1;
+      box-shadow: 10px -55px 30px 15px #823ca6,
+          24px -10px 47px 10px #aab3d2,
+          -21px -25px 97px 10px #5acee3,
+          51px 5px 17px 10px #1b7d8f,
+          3px 2px 77px 10px #f30bf5;
+      animation: shadow-rotate 1.5s linear infinite;
+      transform-origin: center;
+  }
+
+  .pointer {
+    cursor: pointer;
+  }
+
+  .message-container {
+    position: fixed;
+    bottom: 30%; /* Move the container 20% up from the bottom */
+    left: 0;
+    width: 100%;
+    opacity: 90%;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .text-container {
+    position: fixed;
+    bottom: 15%; /* Move the container 20% up from the bottom */
+    left: 0;
+    width: 100%;
+    background-color: white;
+    opacity: 60%;
+    /* color: #fff; */
+    padding: 10px;
+    text-align: center;
+  }
+
+  @keyframes circle-size {
+      from {
+          width: 250px;
+          height: 250px;
+      }
+
+      to {
+          width: 300px;
+          height: 300px;
+      }
+  }
+
+  @keyframes shadow-rotate {
+      from {
+          transform: translate(-50%, -50%) rotate(0deg);
+      }
+
+      to {
+          transform: translate(-50%, -50%) rotate(360deg);
+      }
+  }

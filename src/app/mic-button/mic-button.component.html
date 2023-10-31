@@ -1,0 +1,10 @@
+<div class="mic pointer" (click)="onMicButtonClick()">
+    <i class="mic-icon"></i>
+    <div class="mic-shadow"></div>
+</div>
+<div class="message-container">
+    <h1><i>{{ statusMessage }}</i></h1>
+</div>
+<div class="text-container" *ngIf="transcribedText.length > 0">
+    <h1><i>{{ transcribedText + activeSuffix }}</i></h1>
+</div>
