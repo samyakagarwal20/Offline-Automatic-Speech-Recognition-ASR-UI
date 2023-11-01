@@ -1,0 +1,28 @@
+<div class="login-box">
+    <h2>MEMBER DETAILS</h2>
+    <form [formGroup]="loginForm">
+        <div class="user-box">
+            <input type="text" formControlName="firstName" (click)="onTextboxClick('firstName')">
+            <label>FIRST NAME</label>
+        </div>
+        <div class="user-box">
+            <input type="text" formControlName="lastName" (click)="onTextboxClick('lastName')">
+            <label>LAST NAME</label>
+        </div>
+        <div class="user-box">
+            <input type="text" formControlName="address" (click)="onTextboxClick('address')">
+            <label>ADDRESS</label>
+        </div>
+        <div class="user-box">
+            <input type="text" formControlName="sufferingFrom" (click)="onTextboxClick('sufferingFrom')">
+            <label>SUFFERING FROM</label>
+        </div>
+        <a href="#" (click)="onSubmit()">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Submit
+        </a>
+    </form>
+</div>

@@ -1,0 +1,22 @@
+.internet-connection-status {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 10px;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.icons .fa-circle-notch {
+    opacity: 0.3;
+}
+
+.internet-connection-status .icons .fa-circle-notch.active {
+    opacity: 1;
+    border: 2px solid white;
+    border-radius: 50%;
+}
